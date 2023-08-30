@@ -35,14 +35,3 @@ CREATE TABLE invoices (
     medical_history_id INT,
     CONSTRAINT FK_medical_histories FOREIGN KEY (medical_history_id) REFERENCES medical_histories (id)
 );
-
-CREATE TABLE invoice_items (
-    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    unit_price DECIMAL(18,2),
-    quantity INT,
-    total_price DECIMAL(18,2),
-    invoice_id INT,
-    treatment_id INT,
-    CONSTRAINT FK_invoices FOREIGN KEY (invoice_id) REFERENCES invoices (id),
-    CONSTRAINT FK_treatment FOREIGN KEY (treatment_id) REFERENCES treatments (id)
-);
