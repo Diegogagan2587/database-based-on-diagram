@@ -18,6 +18,15 @@ CREATE TABLE treatments (
     name VARCHAR(125) 
 );
 
+CREATE TABLE history_treatment_relations (
+    medical_history_id INT,
+    treatment_id INT, 
+    date time,
+    PRIMARY KEY (medical_history_id, treatment_id,date),
+    CONSTRAINT FK_medical_history FOREIGN KEY (medical_history_id) REFERENCES medical_histories (id),
+    CONSTRAINT FK_treatments FOREIGN KEY (treatment_id) REFERENCES treatments (id)
+);
+
 CREATE TABLE invoices (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     total_amount DECIMAL(18,2),
