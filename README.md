@@ -112,7 +112,7 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```bash
-  git@github.com:Javivy/vet-clinic-db.git
+  https://github.com/Diegogagan2587/database-based-on-diagram.git
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
