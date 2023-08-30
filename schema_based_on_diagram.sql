@@ -1,0 +1,7 @@
+
+
+CREATE TABLE PATIENTS (
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(125),
+    date_of_birth DATE
+)
